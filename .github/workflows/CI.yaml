@@ -85,10 +85,10 @@ jobs:
       - name: Snyk Auth
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: sudo snyk auth $SNYK_TOKEN
+        run: snyk auth $SNYK_TOKEN
 
       - name: Run Snyk Code Scan And Check Snyk Scan Results
-        run: sudo snyk code test
+        run: snyk code test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
