@@ -92,11 +92,6 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
-      - name: Run Snyk Scan And Check Snyk Results
-        run: snyk test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
       - name: Run Snyk Code Scan And Check Snyk Scan Results
         uses: snyk/actions/iac@master
         env:
