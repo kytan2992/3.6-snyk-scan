@@ -16,8 +16,6 @@ resource "aws_lambda_function" "lambda" {
   filename      = data.archive_file.lambda.output_path
   source_code_hash = data.archive_file.lambda.output_base64sha256
 
-  depends_on = [aws_iam_role_policy_attachment.cloudwatch_logs]
-
   tracing_config {
     mode = "Active"
   }
