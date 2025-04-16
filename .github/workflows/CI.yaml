@@ -100,7 +100,7 @@ jobs:
           args: "--report --severity-threshold=high --scan=resource-changes"
 
   summary:
-    needs: [snyk-checks] # add snyk-checks
+    needs: [terraform-checks, snyk-checks] # add snyk-checks
     runs-on: ubuntu-latest
     steps:
       - name: Adding markdown
