@@ -106,7 +106,7 @@ jobs:
       - name: Adding markdown
         run: |
           TF_STATUS=${{ needs.terraform-checks.outputs.status }}
-          # SNYK_STATUS=${{ needs.snyk-checks.outputs.status }}
+          SNYK_STATUS=${{ needs.snyk-checks.outputs.status }}
 
           echo '## 🚀 Preparing Build Summary 🚀' >> $GITHUB_STEP_SUMMARY
           echo '' >> $GITHUB_STEP_SUMMARY
